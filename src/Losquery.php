@@ -22,6 +22,12 @@ class Losquery
         return $this->factory;
     }
 
+    /**
+     * @param $method
+     * @param $parameters
+     *
+     * @return mixed
+     */
     public function __call($method, $parameters)
     {
         $query = $this->factory;

@@ -5,7 +5,7 @@ namespace Wrcx\Losquery;
 class Config
 {
     /**
-     * Package config
+     * Package configuration
      * @return array
      */
     public static function config()

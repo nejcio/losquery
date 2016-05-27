@@ -14,7 +14,7 @@ class ProcessFactory
     }
 
     /**
-     *
+     * @return Process
      */
     public function getProcess()
     {

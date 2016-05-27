@@ -31,17 +31,16 @@ class SqlQueryBuilder implements SqlQueryInterface
     }
 
     /**
-     * @param Builder     $builder
      * @param string|null $alias
      *
      * @return $this
      */
-    public function fromSelect(Builder $builder, $alias = null)
+    public function fromSelect($alias = null)
     {
         if ($alias === null) {
-            $alias = md5(serialize($builder));
+            $alias = md5(serialize($this->builder));
         }
-        $this->builder->fromSubSelect((string) $builder, $alias);
+        $this->builder->fromSubSelect((string) $this->builder, $alias);
         return $this;
     }
 

@@ -3,7 +3,7 @@
 namespace Wrcx\Losquery\Process;
 
 use Symfony\Component\Process\Process;
-use Wrcx\Losquery\Process\ProcessInterface as ProcessInterface;
+use Wrcx\Losquery\Process\ProcessInterface;
 
 class SymfonyProcess implements ProcessInterface
 {
@@ -15,14 +15,14 @@ class SymfonyProcess implements ProcessInterface
     }
     
     /**
-     * @param string $command
+     * @param string        $command
+     * @param callable|null $onData
+     * @param callable|null $onError
      *
      * @return $this
      */
-    public function run(string $command)
+    public function run(string $command, callable $onData = null, callable $onError = null)
     {
-        $onData = null;
-        $onError = null;
         $this->process->setCommandLine($command);
         $this->process->run(function ($type, $buffer) use ($onData, $onError) {
             $this->processResponse($type, $buffer, $onData, $onError);
@@ -34,7 +34,7 @@ class SymfonyProcess implements ProcessInterface
     /**
      * @return string
      */
-    public function getOutput() 
+    public function getOutput()
     {
         return $this->process->getOutput();
     }
@@ -49,11 +49,11 @@ class SymfonyProcess implements ProcessInterface
     {
         if ($type === "err") {
             if ($onError !== null) {
-                $onError($buffer);
+                echo 'ERR > '.$buffer;
             }
         } else {
             if ($onData !== null) {
-                $onData($buffer);
+                echo 'ERR > '.$buffer;
             }
         }
     }
