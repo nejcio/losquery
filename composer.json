@@ -1,7 +1,8 @@
 {
-    "name": "wrcx/laravel-osquery",
+    "name": "wrcx/losquery",
     "description": "PHP wrapper for Osquery",
     "keywords": ["osquery", "php"],
+    "version": "dev",
     "require": {
         "php": ">=5.5.9",
         "symfony/process": "~3.0",
