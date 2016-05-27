@@ -5,7 +5,11 @@ Losquery is a PHP wrapper around [Facebook's Osquery](http://osquery.io).
 With this package you can communicate with osqueryi(query console/shell).
 
 ## Installation
-For now you can git clone repo to your vendor/ directory.
+
+#### Composer
+```
+    composer require wrcx/laravel-osquery
+```
 
 ## Usage
 #### Building the query
