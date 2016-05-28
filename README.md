@@ -8,7 +8,7 @@ With this package you can communicate with osqueryi(query console/shell).
 
 #### Composer
 ```
-    composer require wrcx/losquery
+    composer require wrcx/losquery:dev-master
 ```
 
 ## Usage
