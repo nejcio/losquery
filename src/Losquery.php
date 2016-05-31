@@ -7,13 +7,13 @@ use Wrcx\Losquery\Builder\SqlQueryFactory;
 class Losquery
 {
     protected $factory;
-    
+
     public function __construct()
     {
         $sqlQueryFactory = new SqlQueryFactory(Config::getConfig('builder'));
         $this->factory = $sqlQueryFactory->newInstance();
     }
-    
+
     /**
      * @return Builder\SqlQueryInterface
      */

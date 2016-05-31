@@ -7,7 +7,7 @@ use Wrcx\Losquery\Process\ProcessFactory;
 class Losrunner
 {
     protected $factory;
-    
+
     public function __construct()
     {
         $processFactory = new ProcessFactory(Config::getConfig('process'));
@@ -26,6 +26,14 @@ class Losrunner
         $process = $this->factory->run($command);
 
         return $process->getOutput();
+    }
+
+    /**
+     * @return Process\ProcessFactory
+     */
+    public function getFactory()
+    {
+        return $this->factory;
     }
 
     /**

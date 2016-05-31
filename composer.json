@@ -2,11 +2,10 @@
     "name": "wrcx/losquery",
     "description": "PHP wrapper for Osquery",
     "keywords": ["osquery", "php"],
-    "version": "dev",
     "require": {
         "php": ">=5.5.9",
         "symfony/process": "~3.0",
-        "nilportugues/sql-query-builder": "^1.5"
+        "aura/sqlquery": "^2.6"
     },
     "require-dev": {
         "phpunit/phpunit": "4.*"
@@ -20,7 +19,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Wrcx\\Losquery\\": "src/"
+            "Wrcx\\Losquery\\": "src/",
+            "LosqueryTest\\": "tests/"
         }
     },
     "minimum-stability": "dev"
