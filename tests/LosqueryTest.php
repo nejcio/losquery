@@ -7,6 +7,7 @@ class LosrunnerTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * Interface check
+     * @tests
     */
     function ifIsAnInstanceOfprocessFactory()
     {
